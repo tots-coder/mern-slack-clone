@@ -5,7 +5,7 @@ import { User } from "../models/user.model.js";
 // Create a client to send and receive events
 export const inngest = new Inngest({ id: "mern-slack-clone" });
 
-const synUser = inngest.createFunction(
+const syncUser = inngest.createFunction(
   { id: "sync-user" },
   { event: "clerk/user.created" },
   async ({ event }) => {
